@@ -16,12 +16,5 @@ function divide(a,b){
     return a / b
 }
 
-let num1, num2, operator;
+console.log(add(2,4));
 
-function operate(num1, num2, operator){
-    if(operator === "+"){
-
-        return add(num1,num2)
-    }
-    
-}
