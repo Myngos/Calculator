@@ -19,5 +19,9 @@ function divide(a,b){
 let num1, num2, operator;
 
 function operate(num1, num2, operator){
-    return add(num1,num2)
+    if(operator === "+"){
+
+        return add(num1,num2)
+    }
+    
 }
