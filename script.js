@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const screen = document.querySelector('.screen')
 
 function add(a,b){
     return a+b
