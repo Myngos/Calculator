@@ -11,7 +11,8 @@ function display_key(key){
 
 //clear screen 
 function clearScreen(){
-    screen.textContent = "";
+    screenContent = ""
+    screen.textContent = screenContent;
 }
 
 //operations
@@ -23,10 +24,47 @@ function subtruct(a,b){
     return a-b
 }
 
-function multiply(){
+function multiply(a,b){
     return a*b
 }
 
 function divide(a,b){
     return a/b
+}
+
+
+function operate(){
+    const input = screenContent;
+    const match = input.match(/(\d+)([+\-x÷])(\d+)/);
+
+    if (!match) {
+        screen.textContent = "Invalid input!";
+        return;
+    }
+
+    const a = parseFloat(match[1]);
+    const operator = match[2];
+    const b = parseFloat(match[3]);
+
+
+    switch(operator){
+        case '+':
+            screenContent = add(a,b);
+            break;
+
+        case '-':
+            screenContent = subtruct(a,b);
+            break;
+
+        case 'x':
+            screenContent = multiply(a,b);
+            break;
+
+        case '÷':
+            screenContent = divide(a,b);
+            break;
+        default:
+            screen.textContent = "Operation not in cali!"
+    }
+    screen.textContent = screenContent;
 }
