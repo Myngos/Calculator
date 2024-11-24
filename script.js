@@ -68,3 +68,8 @@ function operate(){
     }
     screen.textContent = screenContent;
 }
+
+function cancel_input(){
+    screenContent = screenContent.slice(0, -1)
+    screen.textContent = screenContent;
+}
